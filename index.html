@@ -91,7 +91,7 @@
       // make compatible with old and new SignalRConnectionInfo
       info.accessToken = info.accessToken || info.accessKey;
       info.url = info.url || info.endpoint;
-
+      console.log(info);
       data.ready = true;
       const options = {
         accessTokenFactory: () => info.accessToken
