@@ -167,9 +167,7 @@
           .catch(console.error);
       }).catch(alert);
       function getAxiosConfig() {
-        const config = {
-          headers: { 'x-ms-signalr-userid': data.username }
-        };
+        const config = {};
         return config;
       }
       function getConnectionInfo() {
