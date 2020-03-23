@@ -214,9 +214,11 @@
       function newMessage(message) {
         message.id = counter++; // vue transitions need an id
         data.messages.unshift(message);
+        console.log(message);
       };
       function newConnection(message) {
         data.myConnectionId = message.ConnectionId;
+        console.log(data.myConnectionId);
       }
     </script>
 </body>
