@@ -100,9 +100,6 @@
         methods: {
           sendNewMessage: function (isToGroup) {
             if (isToGroup) {
-           
-              this.defaultgroup = prompt('Enter the Azure Function app base URL',  this.defaultgroup);
-              console.log(this.defaultgroup);
               sendMessage(this.username, null, this.defaultgroup, this.newMessage);
             }
             else {
@@ -119,6 +116,9 @@
           },
           addToGroup: function (connectionId, recipient) {
             var r;
+                       
+              this.defaultgroup = prompt('Enter the Azure Function app base URL',  this.defaultgroup);
+              console.log(this.defaultgroup);
             if (connectionId) {
               r = confirm('Add connection ' + connectionId + ' to group: ' + this.defaultgroup);
             } else {
