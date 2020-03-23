@@ -24,7 +24,7 @@
 <body>
   <p>&nbsp;</p>
   <div id="app" class="container">
-    <h3>Serverless chat</h3>
+    <h3>PoC SignalR chat</h3>
     <div class="row" v-if="ready">
       <div class="signalr-demo col-sm">
         <hr />
@@ -156,7 +156,6 @@
         };
         const connection = new signalR.HubConnectionBuilder()
           .withUrl(info.url,options)
-          .configureLogging(signalR.LogLevel.Information)
           .build();
         connection.on('newMessage', newMessage);
         connection.on('newConnection', newConnection)
