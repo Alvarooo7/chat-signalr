@@ -155,7 +155,7 @@
           accessTokenFactory: () => info.accessToken
         };
         const connection = new signalR.HubConnectionBuilder()
-          .withUrl(info.url, options)
+          .withUrl(info.url)
           .configureLogging(signalR.LogLevel.Information)
           .build();
         connection.on('newMessage', newMessage);
