@@ -182,7 +182,7 @@
         return axios.post(`${apiBaseUrl}/api/messages`, {
           connectionId: data.myConnectionId,
           recipient: recipient,
-          isPrivate: recipient != null,
+          isPrivate: true,
           groupname: groupname,
           sender: sender,
           text: messageText,
