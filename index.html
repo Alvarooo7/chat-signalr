@@ -185,7 +185,8 @@
           isPrivate: recipient != null,
           groupname: groupname,
           sender: sender,
-          text: messageText
+          text: messageText,
+          isReject: true
         }, getAxiosConfig()).then(resp => resp.data);
       }
       function addGroup(sender, recipient, connectionId, groupName) {
