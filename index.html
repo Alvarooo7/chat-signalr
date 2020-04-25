@@ -187,7 +187,7 @@
           sender: sender,
           text: messageText,
           isReject: true
-        }, getAxiosConfig()).then(resp => resp.data);
+        }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
         return axios.post(`${apiBaseUrl}/api/addToGroup`, {
