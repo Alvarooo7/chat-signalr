@@ -186,7 +186,8 @@
           groupname: groupname,
           sender: sender,
           text: messageText,
-          isReject: true
+          isRejected: true,
+          travelId:"612"
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
