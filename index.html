@@ -178,6 +178,8 @@
         return axios.post(`${apiBaseUrl}/api/negotiate`, null, getAxiosConfig())
           .then(resp => resp.data);
       }
+      // travelId:"612"
+      //deliveryId:"1382"
       function sendMessage(sender, recipient, groupname, messageText) {
         return axios.post(`${apiBaseUrl}/api/messages`, {
           connectionId: data.myConnectionId,
@@ -187,8 +189,8 @@
           sender: sender,
           text: messageText,
           isRejected: true,
-          travelId:"612",
-          deliveryId:"1382"
+          travelId:"539",
+          deliveryId:"1086"
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
