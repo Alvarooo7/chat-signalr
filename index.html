@@ -92,7 +92,10 @@
         newMessage: '',
         messages: [],
         myConnectionId: '',
-        ready: false
+        ready: false,
+        travelId:"",
+        deliveryId:"",
+        isConfirmation=false
       };
       const app = new Vue({
         el: '#app',
@@ -161,7 +164,9 @@
           .withUrl(info.url,options)
           .build();
         connection.on('newMessage', newMessage);
-        connection.on('newConnection', newConnection)
+        connection.on('newConfirmation', newConfirmation);
+        connection.on('newConnection', newConnection);
+        
         connection.onclose(() => console.log('disconnected'));
         console.log('connecting...');
         connection.start()
@@ -190,7 +195,8 @@
           text: messageText,
           isRejected: true,
           travelId:"539",
-          deliveryId:"1086"
+          deliveryId:"1086",
+          isConfirmation=true
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
@@ -222,6 +228,14 @@
         console.log(".."+data.myConnectionId);
         console.log(message);
       };
+      
+      function newConfirmation(message) {
+        message.id = counter++; // vue transitions need an id
+        data.messages.unshift(message);
+        console.log("Confirmated Data on new event: "+data.isConfirmation);
+        console.log(message);
+      };
+      
       function newConnection(message) {
         data.myConnectionId = message.ConnectionId;
         console.log(data.myConnectionId);
