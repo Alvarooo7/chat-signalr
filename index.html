@@ -185,6 +185,10 @@
       }
       // travelId:"612"
       //deliveryId:"1382"
+      
+      //trans
+      // travelId: 261
+      // deliveryId: 628
       function sendMessage(sender, recipient, groupname, messageText) {
         return axios.post(`${apiBaseUrl}/api/messages`, {
           connectionId: data.myConnectionId,
@@ -194,8 +198,8 @@
           sender: sender,
           text: messageText,
           isRejected: true,
-          travelId:"539",
-          deliveryId:"1086",
+          travelId:"261",
+          deliveryId:"628",
           status:1
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
