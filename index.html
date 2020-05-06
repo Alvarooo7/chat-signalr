@@ -180,8 +180,9 @@
         return config;
       }
       function getConnectionInfo() {
+        console.log(apiBaseUrl);
         return axios.post(`${apiBaseUrl}/api/negotiate`, null, getAxiosConfig())
-          .then(resp => resp.data);
+          .then(resp => console.log(resp.data));
       }
       // travelId:"612"
       //deliveryId:"1382"
