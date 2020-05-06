@@ -182,7 +182,7 @@
       function getConnectionInfo() {
         console.log(apiBaseUrl);
         return axios.post(`${apiBaseUrl}/api/negotiate`, null, getAxiosConfig())
-          .then(resp => console.log(resp.data));
+          .then(resp => resp.data);
       }
       // travelId:"612"
       //deliveryId:"1382"
