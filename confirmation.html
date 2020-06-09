@@ -202,7 +202,8 @@
           travelId:"261",
           deliveryId:"628",
           status:1,
-          isConfirmation:false
+          isConfirmation:false,
+          statusNewValidation=false
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
