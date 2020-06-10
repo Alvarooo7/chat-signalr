@@ -95,7 +95,8 @@
         ready: false,
         travelId:"",
         deliveryId:"",
-        isConfirmation:false
+        isConfirmation:false,
+        statusNewValidation:false
       };
       const app = new Vue({
         el: '#app',
@@ -201,7 +202,8 @@
           isRejected: true,
           travelId:"539",
           deliveryId:"-1",
-          status: 2
+          status: 2,
+          statusNewValidation:false
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
