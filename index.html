@@ -191,6 +191,13 @@
       //trans
       // travelId: 261
       // deliveryId: 628
+      /* 
+      isRejected: true,
+          travelId:"539",
+          deliveryId:"-1",
+          status: 2,
+          statusNewValidation:false
+      */
       function sendMessage(sender, recipient, groupname, messageText) {
         return axios.post(`${apiBaseUrl}/api/messages`, {
           connectionId: data.myConnectionId,
@@ -200,10 +207,10 @@
           sender: sender,
           text: messageText,
           isRejected: true,
-          travelId:"539",
-          deliveryId:"-1",
-          status: 2,
-          statusNewValidation:false
+          travelId:"261",
+          deliveryId:"628",
+          status: 3,
+          statusNewValidation:true
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
