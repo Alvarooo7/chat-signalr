@@ -197,6 +197,17 @@
           deliveryId:"-1",
           status: 2,
           statusNewValidation:false
+          
+          //Prueba obs Validator
+           isPrivate: true,
+          groupname: groupname,
+          sender: sender,
+          text: messageText,
+          isRejected: true,
+          travelId:"261",
+          deliveryId:"628",
+          status: 3,
+          statusNewValidation:true
       */
       function sendMessage(sender, recipient, groupname, messageText) {
         return axios.post(`${apiBaseUrl}/api/messages`, {
@@ -207,10 +218,9 @@
           sender: sender,
           text: messageText,
           isRejected: true,
-          travelId:"261",
-          deliveryId:"628",
-          status: 3,
-          statusNewValidation:true
+          travelId:"1312",
+          deliveryId:"2371",
+          status: 4
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
