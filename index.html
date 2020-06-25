@@ -218,9 +218,10 @@
           sender: sender,
           text: messageText,
           isRejected: true,
-          travelId:"1312",
-          deliveryId:"2371",
-          status: 4
+          travelId:"261",
+          deliveryId:"628",
+          status: 3,
+          statusNewValidation:true
         }, getAxiosConfig()).then(resp => {console.log(resp.data)});
       }
       function addGroup(sender, recipient, connectionId, groupName) {
